@@ -1,0 +1,139 @@
+.card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.statusPill {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status_searching { background: rgba(245, 166, 35, 0.15); color: var(--accent); }
+.status_en_route { background: rgba(59, 130, 246, 0.15); color: #60A5FA; }
+.status_completed { background: rgba(34, 197, 94, 0.15); color: var(--success); }
+.status_cancelled { background: rgba(239, 68, 68, 0.15); color: var(--danger); }
+
+.date {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.route {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 8px 0;
+}
+
+.line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.dotLine {
+  width: 2px;
+  height: 24px;
+  background-color: var(--border);
+  border-radius: 1px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.dotPickup {
+  background-color: var(--text-primary);
+}
+
+.dotDropoff {
+  background-color: var(--accent);
+}
+
+.locations {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 0.9375rem;
+}
+
+.locText {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+  margin-top: 4px;
+}
+
+.driverInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.driverName {
+  font-size: 0.875rem;
+  color: var(--text-primary);
+}
+
+.stats {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.fare {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.meta {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}

@@ -1,0 +1,163 @@
+.container {
+  min-height: 100vh;
+  padding-bottom: 32px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.logoutBtn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.logoutBtn:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--danger);
+}
+
+.mainContent {
+  max-width: 800px;
+  margin: 32px auto 0;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.togglePanel {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.onlineGlow {
+  border-color: var(--success);
+  box-shadow: 0 8px 32px rgba(34, 197, 94, 0.15);
+}
+
+.toggleText h2 { font-size: 1.5rem; margin-bottom: 4px; }
+.toggleText p { color: var(--text-muted); }
+
+.goOnlineBtn {
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  border: none;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.btnOffline { background-color: var(--bg-card); border: 2px solid var(--border); color: var(--text-muted); }
+.btnOnline { background-color: var(--success); box-shadow: 0 0 20px rgba(34, 197, 94, 0.4); }
+
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.statCard {
+  background-color: var(--bg-surface);
+  padding: 16px;
+  border-radius: var(--radius);
+  display: flex; flex-direction: column;
+}
+
+.statIcon { color: var(--accent); margin-bottom: 12px; }
+.statLabel { font-size: 0.875rem; color: var(--text-muted); margin-bottom: 4px; }
+.statValue { font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 700; }
+
+@media (max-width: 600px) {
+  .statsRow { grid-template-columns: repeat(2, 1fr); }
+}
+
+.requestOverlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.6);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.requestCard {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--accent);
+  border-radius: 24px;
+  padding: 32px;
+  width: 100%; max-width: 400px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.pingAnimation {
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 4px;
+  background: var(--accent);
+  animation: shimmer 2s infinite linear;
+}
+
+.reqTitle { color: var(--accent); margin-bottom: 16px; }
+.reqFare { font-family: 'Syne', sans-serif; font-size: 3rem; font-weight: 800; margin-bottom: 8px; }
+.reqDist { color: var(--text-muted); margin-bottom: 24px; }
+
+.reqRoute {
+  display: flex; flex-direction: column; gap: 12px;
+  text-align: left; background: var(--bg-card); padding: 16px; border-radius: var(--radius);
+  margin-bottom: 24px;
+}
+.reqLoc { display: flex; align-items: center; gap: 8px; font-weight: 500; }
+.reqLoc::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+
+.reqActions { display: flex; gap: 12px; }
+.reqActions button { flex: 1; }
+
+.activeTripPanel {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.activeHeader {
+  display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;
+}
+
+.activePassenger { display: flex; align-items: center; gap: 12px; }
+.passAvatar { width: 48px; height: 48px; border-radius: 50%; background: var(--bg-card); border: 2px solid var(--accent); display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--accent); }
+.passName { font-size: 1.125rem; font-weight: 600; }
+.passRole { font-size: 0.875rem; color: var(--text-muted); }
+
+.activeStatus {
+  background: rgba(245, 166, 35, 0.15); color: var(--accent);
+  padding: 4px 12px; border-radius: 999px; font-size: 0.75rem; font-weight: 700;
+}
+
+.historySection { margin-top: 16px; }
+.sectionTitle { font-size: 1.25rem; margin-bottom: 16px; }
+.historyList { display: flex; flex-direction: column; gap: 12px; }

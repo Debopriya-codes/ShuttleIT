@@ -1,0 +1,216 @@
+.container {
+  min-height: 100vh;
+  padding-bottom: 32px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.brand {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.userMenu {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--bg-card);
+  border: 1px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.userName {
+  font-weight: 500;
+}
+
+.logoutBtn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.logoutBtn:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--danger);
+}
+
+.mainContent {
+  display: flex;
+  max-width: 1200px;
+  margin: 32px auto 0;
+  gap: 32px;
+  padding: 0 32px;
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    flex-direction: column;
+    padding: 0 16px;
+  }
+  .leftCol, .rightCol { width: 100% !important; }
+}
+
+.leftCol {
+  width: 60%;
+}
+
+.rightCol {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.bookingPanel {
+  background-color: var(--bg-surface);
+  padding: 32px;
+  border-radius: var(--radius);
+}
+
+.panelTitle {
+  font-size: 2rem;
+  margin-bottom: 24px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.rideOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.rideOptionCard {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background-color: var(--bg-card);
+  border: 2px solid transparent;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.rideOptionCard:hover {
+  border-color: rgba(245, 166, 35, 0.3);
+  transform: translateY(-2px);
+}
+
+.rideOptionCard.selected {
+  border-color: var(--accent);
+  background-color: rgba(245, 166, 35, 0.05);
+}
+
+.checkIcon {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--accent);
+  color: var(--bg-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rideIcon {
+  width: 64px;
+  display: flex;
+  justify-content: center;
+  color: var(--text-primary);
+}
+
+.rideDetails {
+  flex: 1;
+}
+
+.rideName {
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-bottom: 4px;
+}
+
+.rideTime {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.rideFare {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.statsBar {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+  background-color: var(--bg-surface);
+  border-radius: var(--radius);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.statLabel {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.statValue {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.ridesList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
